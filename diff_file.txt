@@ -1,0 +1,12 @@
+diff --git a/src/user/testprogram.cc b/src/user/testprogram.cc
+deleted file mode 100644
+index efc3e91..0000000
+--- a/src/user/testprogram.cc
++++ /dev/null
+@@ -1,6 +0,0 @@
+-#include <iostream>
+-
+-int main()
+-{
+-  std::cout << "Hello World!";
+-}
