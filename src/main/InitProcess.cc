@@ -25,14 +25,17 @@ int InitProcess() {
 #endif
   Process* p2 = knew<Process>();
   p2->exec("threadtest");
-  Process* p3 = knew<Process>();
-  p3->exec("manythread");
 
 //i added this part
     Process* p4 = knew<Process>();
     p4->exec("testprogram");
 //end of what i added
 //add to branch assignment1
+
+  Process* p3 = knew<Process>();
+  p3->exec("manythread");
+
+
 
   return 0;
 }
