@@ -97,6 +97,20 @@ extern "C" int privilege(void* func, mword a1, mword a2, mword a3, mword a4) {
   return syscallStub(SyscallNum::privilege, (mword)func, a1, a2, a3, a4);
 }
 
+extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask)
+{
+
+    //add real implementation later
+    return -1;
+}
+
+
+extern "C" int sched_getaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask)
+{
+    //add real implementation later
+    return -1
+}
+
 /******* dummy functions *******/
 
 extern "C" int fstat(int fildes, struct stat *buf) {
