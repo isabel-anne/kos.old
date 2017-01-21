@@ -234,11 +234,37 @@ extern "C" int isatty(int fd) {
 //  KABORT1("sbrk"); return (void*)-1;
 //}
 
+extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask)
+{
+//add implementation for setaffinity here
+// sets the CPU affinity mask of the process whose ID is pid to the 
+//value specified by mask. 
+ //   mword affinityMask = Runtime::getCurrThread->getAffinityMask(); 
+
+
+/*If pid is zero, then the calling process is used. The argument cpusetsize is the length (in bytes) of the data pointed to by mask. Normally this argument would be specified as
+sizeof(cpu_set_t 
+
+If the process specified by pid is not currently running on one of the
+CPUs specified in mask, then that process is migrated to one of the
+CPUs specified in mask. 
+*/
+return -1;
+}
+
+extern "C" int sched_getaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask)
+{
+//add implementation for getaffinity here
+return -1;
+}
+
 void* __dso_handle = nullptr;
 
 typedef ssize_t (*syscall_t)(mword a1, mword a2, mword a3, mword a4, mword a5);
 static const syscall_t syscalls[] = {
   syscall_t(_exit),
+  syscall_t(sched_setaffinity),
+  syscall_t(sched_getaffinity),  
   syscall_t(open),
   syscall_t(close),
   syscall_t(read),
