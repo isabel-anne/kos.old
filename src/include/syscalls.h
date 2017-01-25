@@ -19,20 +19,21 @@ extern "C" pid_t getcid();
 
 extern "C" int privilege(void*, mword, mword, mword, mword);
 
+/*test commenting out and retrying to apply patch
 //declaring the system call function for sched_setaffinity
 extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask);
 
 //declaring the system cal function for sched_getaffinity
 extern "C" int sched_getaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask);
-
+*/
 
 namespace SyscallNum {
 
 enum : mword {
   _exit = 0,
   //add enum values representing get and set affinity
-  sched_setaffinityEnum,
-  sched_getaffinityEnum,
+//  sched_setaffinityEnum,
+//  sched_getaffinityEnum,
   open,
   close,
   read,
