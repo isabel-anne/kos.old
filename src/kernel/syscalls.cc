@@ -236,6 +236,7 @@ extern "C" int isatty(int fd) {
 
 extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask)
 {
+//TODO
 //add implementation for setaffinity here
 // sets the CPU affinity mask of the process whose ID is pid to the 
 //value specified by mask. 
@@ -254,6 +255,7 @@ return -1;
 
 extern "C" int sched_getaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask)
 {
+//TODO
 //add implementation for getaffinity here
 return -1;
 }

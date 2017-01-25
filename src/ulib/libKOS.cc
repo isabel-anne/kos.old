@@ -99,7 +99,7 @@ extern "C" int privilege(void* func, mword a1, mword a2, mword a3, mword a4) {
 
 extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask)
 {
-
+    //TODO
     //add real implementation later
     return -1;
 }
@@ -107,6 +107,7 @@ extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask)
 
 extern "C" int sched_getaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask)
 {
+    //TODO
     //add real implementation later
     return -1
 }
